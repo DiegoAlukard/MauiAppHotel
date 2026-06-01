@@ -1,14 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<Shell
-    x:Class="MauiAppHotel.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiAppHotel"
-    Title="MauiAppHotel">
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:MauiAppHotel.Views"
+       x:Class="MauiAppHotel.AppShell">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <ShellContent Title="Home" ContentTemplate="{DataTemplate views:MainPage}" />
+
+    <!-- Registrar rotas para navegação por Shell, se necessário -->
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <ShellSection>
+            </ShellSection>
+        </DataTemplate>
+    </Shell.ItemTemplate>
 
 </Shell>

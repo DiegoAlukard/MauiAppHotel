@@ -1,10 +1,15 @@
-﻿namespace MauiAppHotel
+﻿using Microsoft.Maui.Controls;
+using MauiAppHotel.Views;
+
+namespace MauiAppHotel;
+
+public partial class AppShell : Shell
 {
-    public partial class AppShell : Shell
+    public AppShell()
     {
-        public AppShell()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+
+        // Registrar rota para HospedagemContratada
+        Routing.RegisterRoute(nameof(HospedagemContratada), typeof(HospedagemContratada));
     }
 }
